@@ -543,6 +543,43 @@ body {
 .kpi-indicator--risk { background: var(--error-bg); color: var(--error); }
 .kpi-indicator svg { flex-shrink: 0; }
 
+/* KPI visuals: sparkline + progress bar */
+.kpi-sparkline {
+  margin: var(--space-3) 0;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.kpi-sparkline svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.kpi-card--good .kpi-sparkline line,
+.kpi-card--good .kpi-sparkline polyline { stroke: var(--success); }
+.kpi-card--warn .kpi-sparkline line,
+.kpi-card--warn .kpi-sparkline polyline { stroke: var(--warning); }
+.kpi-card--risk .kpi-sparkline line,
+.kpi-card--risk .kpi-sparkline polyline { stroke: var(--error); }
+.kpi-bar-wrap {
+  margin: var(--space-3) 0;
+  font-size: var(--text-xs); color: var(--text-muted); margin-bottom: 2px;
+}
+.kpi-bar-track {
+  height: 8px;
+  background: var(--border-light);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.kpi-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.3s ease;
+}
+.kpi-card--good .kpi-bar-fill { background: var(--success); }
+.kpi-card--warn .kpi-bar-fill { background: var(--warning); }
+.kpi-card--risk .kpi-bar-fill { background: var(--error); }
+
 /* Data card & table */
 .data-card {
   background: var(--bg-surface);
