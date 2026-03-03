@@ -20,6 +20,7 @@
         <a href="startup-reports.html">Reports</a>
         <a href="startup-recommendations.html">Recommendations</a>
         <a href="startup-settings.html">Settings</a>
+        <a href="index.html">Log out</a>
       </nav>
     </aside>
     <main class="main">
@@ -114,15 +115,45 @@
 
         <section class="card">
           <div class="card-title">Revenue trend (last 6 months)</div>
-          <div class="chart-placeholder">
-            <div class="chart-bar" style="height: 45%;"></div>
-            <div class="chart-bar" style="height: 52%;"></div>
-            <div class="chart-bar" style="height: 48%;"></div>
-            <div class="chart-bar" style="height: 65%;"></div>
-            <div class="chart-bar" style="height: 72%;"></div>
-            <div class="chart-bar" style="height: 85%;"></div>
+          <div class="line-chart-wrap">
+            <svg class="line-chart" viewBox="0 0 560 220" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color: var(--primary); stop-opacity: 0.3"/>
+                  <stop offset="100%" style="stop-color: var(--primary); stop-opacity: 0"/>
+                </linearGradient>
+              </defs>
+              <!-- grid lines -->
+              <line x1="40" y1="20" x2="40" y2="160" stroke="var(--border-light)" stroke-width="1"/>
+              <line x1="40" y1="160" x2="540" y2="160" stroke="var(--border-light)" stroke-width="1"/>
+              <!-- filled area under line -->
+              <polygon fill="url(#lineGrad)" points="40,136 140,118 240,126 340,92 440,68 540,20 540,160 40,160"/>
+              <!-- data line -->
+              <polyline fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                points="40,136 140,118 240,126 340,92 440,68 540,20"/>
+              <!-- data points -->
+              <circle cx="40" cy="136" r="4" fill="var(--primary)"/>
+              <circle cx="140" cy="118" r="4" fill="var(--primary)"/>
+              <circle cx="240" cy="126" r="4" fill="var(--primary)"/>
+              <circle cx="340" cy="92" r="4" fill="var(--primary)"/>
+              <circle cx="440" cy="68" r="4" fill="var(--primary)"/>
+              <circle cx="540" cy="20" r="4" fill="var(--primary)"/>
+              <!-- value labels above points -->
+              <text x="40" y="125" class="line-chart-value" text-anchor="middle">3.2L</text>
+              <text x="140" y="107" class="line-chart-value" text-anchor="middle">3.7L</text>
+              <text x="240" y="115" class="line-chart-value" text-anchor="middle">3.5L</text>
+              <text x="340" y="81" class="line-chart-value" text-anchor="middle">4.2L</text>
+              <text x="440" y="57" class="line-chart-value" text-anchor="middle">4.6L</text>
+              <text x="540" y="9" class="line-chart-value" text-anchor="middle">5.0L</text>
+              <!-- month labels -->
+              <text x="40" y="182" class="line-chart-label" text-anchor="middle">Aug</text>
+              <text x="140" y="182" class="line-chart-label" text-anchor="middle">Sep</text>
+              <text x="240" y="182" class="line-chart-label" text-anchor="middle">Oct</text>
+              <text x="340" y="182" class="line-chart-label" text-anchor="middle">Nov</text>
+              <text x="440" y="182" class="line-chart-label" text-anchor="middle">Dec</text>
+              <text x="540" y="182" class="line-chart-label" text-anchor="middle">Jan</text>
+            </svg>
           </div>
-          <p style="font-size: var(--text-xs); color: var(--text-muted); margin-top: var(--space-2);">Aug — Sep — Oct — Nov — Dec — Jan</p>
         </section>
 
         <div class="section-title">Cash expenditure</div>
