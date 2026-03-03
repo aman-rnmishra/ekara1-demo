@@ -48,50 +48,69 @@
         </div>
       </header>
       <div class="content">
-        <div class="section-title">Key metrics</div>
-        <div class="metrics-grid">
-          <div class="metric-card"><div class="metric-label">MRR</div><div class="metric-value">₹4.2L</div><div class="metric-trend up">↑ 12%</div></div>
-          <div class="metric-card"><div class="metric-label">ARR</div><div class="metric-value">₹50.4L</div><div class="metric-trend up">↑ 12%</div></div>
-          <div class="metric-card"><div class="metric-label">Burn rate</div><div class="metric-value">₹2.1L</div><div class="metric-trend down">↓ 5%</div></div>
-          <div class="metric-card"><div class="metric-label">Runway</div><div class="metric-value">18 mo</div><div class="metric-trend up">↑ 2 mo</div></div>
-        </div>
-        <div class="metrics-grid">
-          <div class="metric-card"><div class="metric-label">Cash balance</div><div class="metric-value">₹38L</div><div class="metric-trend up">↑ 8%</div></div>
-          <div class="metric-card"><div class="metric-label">Customers</div><div class="metric-value">124</div><div class="metric-trend up">↑ 6</div></div>
-          <div class="metric-card"><div class="metric-label">CAC</div><div class="metric-value">₹8,200</div><div class="metric-trend down">↓ 3%</div></div>
-          <div class="metric-card"><div class="metric-label">LTV : CAC</div><div class="metric-value">3.2x</div><div class="metric-trend up">Healthy</div></div>
-        </div>
-        <section class="card">
-          <div class="card-title">Revenue trend (last 6 months)</div>
-          <div class="chart-placeholder">
-            <div class="chart-bar" style="height: 45%;"></div>
-            <div class="chart-bar" style="height: 52%;"></div>
-            <div class="chart-bar" style="height: 48%;"></div>
-            <div class="chart-bar" style="height: 65%;"></div>
-            <div class="chart-bar" style="height: 72%;"></div>
-            <div class="chart-bar" style="height: 85%;"></div>
+        <div class="content-inner">
+          <div class="page-hero">
+            <h2 class="page-title">Metrics</h2>
+            <p class="page-desc">Major KPIs and health indicators. Use the dashboard for full details and trends.</p>
           </div>
-          <p style="font-size: 12px; color: var(--gray-500); margin-top: 8px;">Aug — Sep — Oct — Nov — Dec — Jan</p>
-        </section>
-        <div class="section-title">Cash expenditure & projections</div>
-        <div class="data-card">
-          <h3>Month-wise (last 6 months)</h3>
-          <table class="data-table">
-            <thead><tr><th>Month</th><th class="num">Total</th></tr></thead>
-            <tbody>
-              <tr><td>Aug 2025</td><td class="num">₹2.25L</td></tr>
-              <tr><td>Sep 2025</td><td class="num">₹2.30L</td></tr>
-              <tr><td>Oct 2025</td><td class="num">₹2.35L</td></tr>
-              <tr><td>Nov 2025</td><td class="num">₹2.40L</td></tr>
-              <tr><td>Dec 2025</td><td class="num">₹2.55L</td></tr>
-              <tr><td>Jan 2026</td><td class="num">₹2.50L</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="projection-cards">
-          <div class="projection-card"><div class="year">Year 1</div><div class="amount">₹62L</div><div class="note">Projected closing cash (2026)</div></div>
-          <div class="projection-card"><div class="year">Year 2</div><div class="amount">₹98L</div><div class="note">Projected closing cash (2027)</div></div>
-          <div class="projection-card"><div class="year">Year 3</div><div class="amount">₹1.42 Cr</div><div class="note">Projected closing cash (2028)</div></div>
+          <div class="kpi-section-title">Major KPIs</div>
+          <div class="kpi-grid">
+            <div class="kpi-card kpi-card--good">
+              <div class="kpi-label">MRR</div>
+              <div class="kpi-value">₹4.2L</div>
+              <div class="kpi-trend up">↑ 12% vs last month</div>
+              <span class="kpi-indicator kpi-indicator--good">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                On track
+              </span>
+            </div>
+            <div class="kpi-card kpi-card--good">
+              <div class="kpi-label">Burn rate</div>
+              <div class="kpi-value">₹2.1L</div>
+              <div class="kpi-trend down">↓ 5% — reducing</div>
+              <span class="kpi-indicator kpi-indicator--good">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                On track
+              </span>
+            </div>
+            <div class="kpi-card kpi-card--good">
+              <div class="kpi-label">Runway</div>
+              <div class="kpi-value">18 mo</div>
+              <div class="kpi-trend up">↑ 2 mo vs last quarter</div>
+              <span class="kpi-indicator kpi-indicator--good">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                On track
+              </span>
+            </div>
+            <div class="kpi-card kpi-card--warn">
+              <div class="kpi-label">Cash balance</div>
+              <div class="kpi-value">₹38L</div>
+              <div class="kpi-trend up">↑ 8%</div>
+              <span class="kpi-indicator kpi-indicator--warn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                Watch — below 3-mo target
+              </span>
+            </div>
+            <div class="kpi-card kpi-card--good">
+              <div class="kpi-label">ARR</div>
+              <div class="kpi-value">₹50.4L</div>
+              <div class="kpi-trend up">↑ 12% YoY</div>
+              <span class="kpi-indicator kpi-indicator--good">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                On track
+              </span>
+            </div>
+            <div class="kpi-card kpi-card--good">
+              <div class="kpi-label">LTV : CAC</div>
+              <div class="kpi-value">3.2x</div>
+              <div class="kpi-trend up">Healthy ratio</div>
+              <span class="kpi-indicator kpi-indicator--good">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                On track
+              </span>
+            </div>
+          </div>
+          <p style="font-size: var(--text-sm); color: var(--text-muted);">For revenue trends, cash expenditure, and projections, see <a href="startup-dashboard.html" style="color: var(--primary); font-weight: 500;">Dashboard</a>.</p>
         </div>
       </div>
     </main>
