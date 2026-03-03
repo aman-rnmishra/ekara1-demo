@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Recommendations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="startup-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="startup-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="startup-dashboard.html">Dashboard</a>
+        <a href="startup-upload.html">Upload data</a>
+        <a href="startup-metrics.html">Metrics</a>
+        <a href="startup-investors.html">Investors</a>
+        <a href="startup-reports.html">Reports</a>
+        <a href="startup-recommendations.html" class="active">Recommendations</a>
+        <a href="startup-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Recommendations</h1>
+        <div class="header-right">
+          <select class="company-select"><option>Demo Startup Pvt Ltd</option></select>
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="startup-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New recommendations for you</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="startup-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="startup-settings.html" class="avatar" title="Settings">A</a>
+        </div>
+      </header>
+      <div class="content">
+        <div class="content-inner">
+          <div class="page-hero">
+            <h2 class="page-title">Recommendations</h2>
+            <p class="page-desc">Curated action items and next steps from the Ekara expert team.</p>
+          </div>
+          <p class="rec-expert-badge">From our experts · Updated regularly</p>
+
+          <div class="section-title">Immediate (Day 1 – Week 4)</div>
+
+          <div class="rec-card rec-high">
+            <div class="rec-meta"><span class="rec-priority">Priority: Critical</span><span class="rec-category">Cash flow</span><span class="rec-impact">Impact: 9/10</span><span class="rec-date">Published 20 Jan 2026</span></div>
+            <div class="rec-title">Cash protection mode</div>
+            <div class="rec-target">Target: Maintain minimum ₹25–30L liquidity. Create 13-week rolling cash flow (weekly inflow, outflow, minimum buffer).</div>
+            <ul class="rec-actions">
+              <li>Stop all non-essential spending</li>
+              <li>Freeze new hiring</li>
+              <li>Freeze new software capex</li>
+              <li>No expansion spending</li>
+            </ul>
+          </div>
+
+          <div class="rec-card rec-high">
+            <div class="rec-meta"><span class="rec-priority">Priority: Critical</span><span class="rec-category">Margin</span><span class="rec-impact">Impact: 9/10</span><span class="rec-date">Published 22 Jan 2026</span></div>
+            <div class="rec-title">Fix gross margin</div>
+            <div class="rec-target">Current ~3–4%. Target minimum 7–8%. Even 2% improvement on scale can reduce loss significantly.</div>
+            <ul class="rec-actions">
+              <li>Increase selling price by 1–2%</li>
+              <li>Renegotiate supplier contracts</li>
+              <li>Remove low-margin SKUs</li>
+              <li>Introduce service commission layer where applicable</li>
+            </ul>
+          </div>
+
+          <div class="rec-card rec-high">
+            <div class="rec-meta"><span class="rec-priority">Priority: Critical</span><span class="rec-category">Receivables</span><span class="rec-impact">Impact: 8/10</span><span class="rec-date">Published 24 Jan 2026</span></div>
+            <div class="rec-title">Fix receivable cycle</div>
+            <div class="rec-target">Target: Reduce receivable days to &lt; 30 days. Freeing ₹40L+ improves liquidity immediately.</div>
+            <ul class="rec-actions">
+              <li>No new dispatch without 30% advance</li>
+              <li>Incentive for early payment; penalize delayed payments</li>
+              <li>Appoint receivable collection lead</li>
+            </ul>
+          </div>
+
+          <div class="rec-card rec-medium">
+            <div class="rec-meta"><span class="rec-priority">Priority: High</span><span class="rec-category">OPEX</span><span class="rec-impact">Impact: 7/10</span><span class="rec-date">Published 26 Jan 2026</span></div>
+            <div class="rec-title">Reduce operating expenses</div>
+            <div class="rec-target">Audit direct expense, employee cost, admin overhead. Even 5% OPEX reduction can save ₹25–30L annually.</div>
+            <ul class="rec-actions">
+              <li>Remove duplicate software and non-performing vendors</li>
+              <li>Plug unnecessary logistics leakages</li>
+            </ul>
+          </div>
+
+          <div class="rec-card rec-medium">
+            <div class="rec-meta"><span class="rec-priority">Priority: High</span><span class="rec-category">Capital</span><span class="rec-impact">Impact: 7/10</span><span class="rec-date">Published 28 Jan 2026</span></div>
+            <div class="rec-title">Restructure borrowings</div>
+            <div class="rec-target">Avoid high-interest NBFC loans. Prefer working capital CC limit or equity raise (e.g. ₹50–75L). Debt on negative profit increases risk.</div>
+            <ul class="rec-actions">
+              <li>Apply for working capital CC limit</li>
+              <li>Evaluate equity raise for runway</li>
+            </ul>
+          </div>
+
+          <div class="section-title">Structural (3–12 months)</div>
+
+          <div class="rec-card">
+            <div class="rec-meta"><span class="rec-category">Business model</span><span class="rec-impact">Impact: 8/10</span><span class="rec-date">Published 30 Jan 2026</span></div>
+            <div class="rec-title">Shift to hybrid model</div>
+            <div class="rec-target">Add value-added processing, branding, tech subscription or recurring revenue to stabilize margins.</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-meta"><span class="rec-category">Margin policy</span><span class="rec-impact">Impact: 7/10</span><span class="rec-date">Published 1 Feb 2026</span></div>
+            <div class="rec-title">Margin discipline policy</div>
+            <div class="rec-target">Minimum gross margin rule: no transaction below 6% unless strategic client.</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-meta"><span class="rec-category">Controls</span><span class="rec-impact">Impact: 8/10</span><span class="rec-date">Published 2 Feb 2026</span></div>
+            <div class="rec-title">Strengthen financial controls</div>
+            <div class="rec-target">Monthly MIS, SKU-level margin sheet, client profitability sheet, cash conversion cycle tracker.</div>
+          </div>
+
+          <div class="card" style="margin-top: var(--space-6);">
+            <div class="card-title">Recommended priority order</div>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-3);">From our experts · 28 Jan 2026</p>
+            <ol style="margin: 0; padding-left: 20px; font-size: var(--text-sm); color: var(--text-primary); line-height: 1.8;">
+              <li>Cash flow control (Week 1)</li>
+              <li>Margin improvement (Month 1)</li>
+              <li>Receivable discipline (Month 1–2)</li>
+              <li>Cost restructuring (Month 2)</li>
+              <li>Capital restructuring (Month 3)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>

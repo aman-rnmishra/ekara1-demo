@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Benchmarks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="investor-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="investor-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="investor-dashboard.html">Portfolio</a>
+        <a href="investor-reports.html">Reports</a>
+        <a href="investor-benchmarks.html" class="active">Benchmarks</a>
+        <a href="investor-recommendations.html">Recommendations</a>
+        <a href="investor-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Benchmarks</h1>
+        <div class="header-right">
+          <select id="benchMetric" style="padding: 8px 12px; border: 1px solid var(--gray-200); border-radius: var(--radius); font-size: 14px; background: #fff;" onchange="applyBenchmark()">
+            <option value="mrr">MRR growth</option>
+            <option value="burn">Burn rate</option>
+            <option value="runway">Runway</option>
+          </select>
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="investor-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New portfolio recommendations</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="investor-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="investor-settings.html" class="avatar">I</a>
+        </div>
+      </header>
+      <div class="content">
+        <section class="card">
+          <div class="card-title">Portfolio vs sector</div>
+          <p style="margin-bottom: 16px;">Compare your portfolio companies against sector benchmarks.</p>
+          <table class="data-table">
+            <thead><tr><th>Metric</th><th class="num">Your portfolio (avg)</th><th class="num">Sector median</th><th class="num">Top quartile</th></tr></thead>
+            <tbody>
+              <tr><td>MRR growth (MoM)</td><td class="num">8.2%</td><td class="num">5.1%</td><td class="num">12.0%</td></tr>
+              <tr><td>Burn rate (₹L/mo)</td><td class="num">3.6</td><td class="num">4.2</td><td class="num">2.8</td></tr>
+              <tr><td>Runway (months)</td><td class="num">16</td><td class="num">14</td><td class="num">22</td></tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-primary" style="margin-top: 12px;" onclick="showToast('Benchmark export (demo)')">Export benchmark data</button>
+        </section>
+        <section class="card">
+          <div class="card-title">Company comparison</div>
+          <p style="margin-bottom: 16px;">Select companies to compare side by side.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px;">
+            <label><input type="checkbox" checked> Demo Startup One</label>
+            <label><input type="checkbox" checked> Demo Company Alpha</label>
+            <label><input type="checkbox" checked> Demo Ventures Ltd</label>
+          </div>
+          <button type="button" class="btn btn-outline" onclick="showToast('Comparison updated (demo)')">Update comparison</button>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" style="display: none;"></div>
+  <script>
+    function showToast(msg) { var el = document.getElementById('toast'); el.textContent = msg; el.style.display = 'block'; setTimeout(function() { el.style.display = 'none'; }, 3000); }
+    function applyBenchmark() { showToast('Filter applied: ' + document.getElementById('benchMetric').selectedOptions[0].text); }
+  </script>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>

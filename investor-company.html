@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Company details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="investor-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="investor-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="investor-dashboard.html">Portfolio</a>
+        <a href="investor-reports.html">Reports</a>
+        <a href="investor-benchmarks.html">Benchmarks</a>
+        <a href="investor-recommendations.html">Recommendations</a>
+        <a href="investor-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1 id="pageTitle">Company details</h1>
+        <div class="header-right">
+          <a href="investor-dashboard.html" class="btn btn-outline">Back to portfolio</a>
+          <button type="button" class="btn btn-primary" onclick="downloadReport()">Download report</button>
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="investor-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New portfolio recommendations</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="investor-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="investor-settings.html" class="avatar">I</a>
+        </div>
+      </header>
+      <div class="content">
+        <div class="summary-cards">
+          <div class="summary-card">
+            <div class="label">MRR</div>
+            <div class="value" id="mrr">₹4.2L</div>
+            <div class="m-trend up">↑ 12%</div>
+          </div>
+          <div class="summary-card">
+            <div class="label">Burn</div>
+            <div class="value" id="burn">₹2.1L</div>
+            <div class="m-trend down">↓ 5%</div>
+          </div>
+          <div class="summary-card">
+            <div class="label">Runway</div>
+            <div class="value" id="runway">18 mo</div>
+          </div>
+        </div>
+        <div class="data-card">
+          <h3>Recent cash expenditure</h3>
+          <table class="data-table">
+            <thead><tr><th>Month</th><th class="num">Total</th></tr></thead>
+            <tbody>
+              <tr><td>Jan 2026</td><td class="num">₹2.50L</td></tr>
+              <tr><td>Dec 2025</td><td class="num">₹2.55L</td></tr>
+              <tr><td>Nov 2025</td><td class="num">₹2.40L</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="projection-cards">
+          <div class="projection-card">
+            <div class="year">Year 1</div>
+            <div class="amount" id="y1">₹62L</div>
+          </div>
+          <div class="projection-card">
+            <div class="year">Year 2</div>
+            <div class="amount" id="y2">₹98L</div>
+          </div>
+          <div class="projection-card">
+            <div class="year">Year 3</div>
+            <div class="amount" id="y3">₹1.42 Cr</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" style="display: none;"></div>
+  <script>
+    var companies = {
+      demo1: { name: 'Demo Startup One', mrr: '₹4.2L', burn: '₹2.1L', runway: '18 mo', y1: '₹62L', y2: '₹98L', y3: '₹1.42 Cr' },
+      alpha: { name: 'Demo Company Alpha', mrr: '₹1.8L', burn: '₹2.4L', runway: '8 mo', y1: '₹18L', y2: '₹12L', y3: '₹8L' },
+      ventures: { name: 'Demo Ventures Ltd', mrr: '₹12.5L', burn: '₹6.2L', runway: '24 mo', y1: '₹1.2 Cr', y2: '₹2.1 Cr', y3: '₹3.4 Cr' }
+    };
+    var params = new URLSearchParams(location.search);
+    var id = params.get('company') || 'demo1';
+    var c = companies[id] || companies.demo1;
+    document.getElementById('pageTitle').textContent = c.name;
+    document.getElementById('mrr').textContent = c.mrr;
+    document.getElementById('burn').textContent = c.burn;
+    document.getElementById('runway').textContent = c.runway;
+    document.getElementById('y1').textContent = c.y1;
+    document.getElementById('y2').textContent = c.y2;
+    document.getElementById('y3').textContent = c.y3;
+    function showToast(msg) { var el = document.getElementById('toast'); el.textContent = msg; el.style.display = 'block'; setTimeout(function() { el.style.display = 'none'; }, 3000); }
+    function downloadReport() { showToast('Downloading report: ' + c.name + ' (demo)'); }
+  </script>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>

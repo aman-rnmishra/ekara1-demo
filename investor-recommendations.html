@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Recommendations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="investor-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="investor-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="investor-dashboard.html">Portfolio</a>
+        <a href="investor-reports.html">Reports</a>
+        <a href="investor-benchmarks.html">Benchmarks</a>
+        <a href="investor-recommendations.html" class="active">Recommendations</a>
+        <a href="investor-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Recommendations</h1>
+        <div class="header-right">
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="investor-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New portfolio recommendations</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="investor-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="investor-settings.html" class="avatar">I</a>
+        </div>
+      </header>
+      <div class="content">
+        <div class="content-inner">
+          <div class="page-hero">
+            <h2 class="page-title">Recommendations</h2>
+            <p class="page-desc">Curated recommendations from our experts for your portfolio. Click a company to see its recommendations.</p>
+          </div>
+          <p class="rec-expert-badge">From our expert team · Updated regularly</p>
+
+          <div class="section-title">By company</div>
+          <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: var(--space-4);">Click a company to view recommendations for that company.</p>
+
+          <details class="rec-company-block" open>
+            <summary>Demo Company Alpha</summary>
+            <div class="rec-company-body">
+              <div class="rec-card rec-high">
+                <div class="rec-meta"><span class="rec-priority">Priority: Watch</span><span class="rec-date">Published 20 Jan 2026</span></div>
+                <div class="rec-title">Cash and margin focus</div>
+                <ul class="rec-actions">
+                  <li>Runway &lt; 12 months — recommend 13-week cash flow and liquidity buffer target</li>
+                  <li>Gross margin below sector — suggest margin discipline and receivable cycle review</li>
+                  <li>Follow up on next monthly report for progress on burn and collections</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="rec-company-block">
+            <summary>Demo Startup One</summary>
+            <div class="rec-company-body">
+              <div class="rec-card">
+                <div class="rec-meta"><span class="rec-date">Published 24 Jan 2026</span></div>
+                <div class="rec-title">Stable — maintain oversight</div>
+                <ul class="rec-actions">
+                  <li>Healthy runway and margin; continue monthly reporting cadence</li>
+                  <li>Optional: suggest structural improvements (recurring revenue, margin policy) in next board touchpoint</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="rec-company-block">
+            <summary>Demo Ventures Ltd</summary>
+            <div class="rec-company-body">
+              <div class="rec-card">
+                <div class="rec-meta"><span class="rec-date">Published 28 Jan 2026</span></div>
+                <div class="rec-title">Strong metrics — scale with discipline</div>
+                <ul class="rec-actions">
+                  <li>MRR growth and runway in good range</li>
+                  <li>Recommend maintaining SKU-level margin and cash conversion cycle tracking before further scale</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <div class="section-title">Portfolio-level</div>
+
+          <div class="card">
+            <div class="card-title">Suggested focus order</div>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-3);">From our experts · 2 Feb 2026</p>
+            <ol style="margin: 0; padding-left: 20px; font-size: var(--text-sm); color: var(--text-primary); line-height: 1.8;">
+              <li>Companies with runway &lt; 12 mo: cash flow and receivables</li>
+              <li>Companies with margin below 6%: margin improvement and OPEX review</li>
+              <li>All: ensure monthly/quarterly report cadence and benchmark comparison</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>

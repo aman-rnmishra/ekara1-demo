@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="investor-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="investor-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="investor-dashboard.html" class="active">Portfolio</a>
+        <a href="investor-reports.html">Reports</a>
+        <a href="investor-benchmarks.html">Benchmarks</a>
+        <a href="investor-recommendations.html">Recommendations</a>
+        <a href="investor-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Portfolio overview</h1>
+        <div class="header-right">
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="investor-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New portfolio recommendations</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="investor-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="investor-settings.html" class="avatar">I</a>
+        </div>
+      </header>
+      <div class="content">
+        <div class="content-inner">
+        <div class="page-hero">
+          <h2 class="page-title">Portfolio overview</h2>
+          <p class="page-desc">Track your portfolio companies, metrics, and reports in one place.</p>
+        </div>
+        <div class="toolbar">
+          <div class="search-wrap">
+            <input type="text" placeholder="Search companies, reports..." readonly>
+          </div>
+          <div class="filter-pills">
+            <button type="button" class="filter-pill">All companies</button>
+            <button type="button" class="filter-pill">Healthy</button>
+            <button type="button" class="filter-pill">Watch</button>
+          </div>
+        </div>
+        <div class="section-title">Portfolio summary</div>
+        <div class="summary-cards">
+          <div class="summary-card">
+            <div class="label">Companies</div>
+            <div class="value">12</div>
+          </div>
+          <div class="summary-card">
+            <div class="label">Total portfolio MRR</div>
+            <div class="value">₹42.8L</div>
+          </div>
+          <div class="summary-card">
+            <div class="label">Avg. runway</div>
+            <div class="value">16 mo</div>
+          </div>
+        </div>
+
+        <div class="section-title">Portfolio companies</div>
+        <div class="company-cards">
+          <div class="company-card healthy">
+            <div>
+              <div class="company-name">Demo Startup One</div>
+              <div class="company-meta">Last updated: 2 days ago</div>
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="m-label">MRR</div>
+                  <div class="m-value">₹4.2L</div>
+                  <div class="m-trend up">↑ 12%</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Burn</div>
+                  <div class="m-value">₹2.1L</div>
+                  <div class="m-trend down">↓ 5%</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Runway</div>
+                  <div class="m-value">18 mo</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Customers</div>
+                  <div class="m-value">124</div>
+                  <div class="m-trend up">↑ 6</div>
+                </div>
+              </div>
+            </div>
+            <div class="company-actions">
+              <span class="badge badge-healthy">Healthy</span>
+              <a href="investor-company.html?company=demo1" class="btn btn-primary">View details</a>
+              <button type="button" class="btn btn-outline" onclick="downloadReport('Demo Startup One')">Download report</button>
+            </div>
+          </div>
+
+          <div class="company-card warning">
+            <div>
+              <div class="company-name">Demo Company Alpha</div>
+              <div class="company-meta">Last updated: 5 days ago</div>
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="m-label">MRR</div>
+                  <div class="m-value">₹1.8L</div>
+                  <div class="m-trend down">↓ 4%</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Burn</div>
+                  <div class="m-value">₹2.4L</div>
+                  <div class="m-trend up">↑ 8%</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Runway</div>
+                  <div class="m-value">8 mo</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Customers</div>
+                  <div class="m-value">48</div>
+                  <div class="m-trend down">↓ 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="company-actions">
+              <span class="badge badge-warning">Watch</span>
+              <a href="investor-company.html?company=alpha" class="btn btn-primary">View details</a>
+              <button type="button" class="btn btn-outline" onclick="downloadReport('Demo Company Alpha')">Download report</button>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div>
+              <div class="company-name">Demo Ventures Ltd</div>
+              <div class="company-meta">Last updated: 1 day ago</div>
+              <div class="company-metrics">
+                <div class="company-metric">
+                  <div class="m-label">MRR</div>
+                  <div class="m-value">₹12.5L</div>
+                  <div class="m-trend up">↑ 18%</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Burn</div>
+                  <div class="m-value">₹6.2L</div>
+                  <div class="m-trend down">↓ 3%</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Runway</div>
+                  <div class="m-value">24 mo</div>
+                </div>
+                <div class="company-metric">
+                  <div class="m-label">Customers</div>
+                  <div class="m-value">312</div>
+                  <div class="m-trend up">↑ 24</div>
+                </div>
+              </div>
+            </div>
+            <div class="company-actions">
+              <span class="badge badge-healthy">Healthy</span>
+              <a href="investor-company.html?company=ventures" class="btn btn-primary">View details</a>
+              <button type="button" class="btn btn-outline" onclick="downloadReport('Demo Ventures Ltd')">Download report</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title">Recent updates</div>
+        <div class="data-card">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Last updated</th>
+                <th>Latest report</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Demo Ventures Ltd</td>
+                <td>1 day ago</td>
+                <td>Monthly — Jan 2026</td>
+                <td><a href="investor-company.html?company=ventures" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">View</a></td>
+              </tr>
+              <tr>
+                <td>Demo Startup One</td>
+                <td>2 days ago</td>
+                <td>Monthly — Jan 2026</td>
+                <td><a href="investor-company.html?company=demo1" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">View</a></td>
+              </tr>
+              <tr>
+                <td>Demo Company Alpha</td>
+                <td>5 days ago</td>
+                <td>Quarterly — Q4 2025</td>
+                <td><a href="investor-company.html?company=alpha" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px;">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-title">Portfolio insights</div>
+        <div class="summary-cards">
+          <div class="summary-card" style="cursor: pointer;" onclick="window.location.href='investor-benchmarks.html';">
+            <div class="label">Portfolio vs sector</div>
+            <div class="value" style="font-size: 16px;">Compare benchmarks</div>
+            <div style="font-size: 12px; color: var(--gray-500); margin-top: 6px;">MRR growth, burn, runway vs median</div>
+          </div>
+          <div class="summary-card" style="cursor: pointer;" onclick="window.location.href='investor-reports.html';">
+            <div class="label">Reports</div>
+            <div class="value" style="font-size: 16px;">Download reports</div>
+            <div style="font-size: 12px; color: var(--gray-500); margin-top: 6px;">Company & portfolio reports</div>
+          </div>
+          <div class="summary-card">
+            <div class="label">Portfolio health</div>
+            <div class="value">2 Healthy, 1 Watch</div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Across visible companies</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" style="display: none;"></div>
+  <script>
+    function showToast(msg) { var el = document.getElementById('toast'); el.textContent = msg; el.style.display = 'block'; setTimeout(function() { el.style.display = 'none'; }, 3000); }
+    function downloadReport(name) { showToast('Downloading report: ' + name + ' (demo)'); }
+  </script>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>

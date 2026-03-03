@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Startup & investor reporting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-hover: #047857;
+      --primary-subtle: #ecfdf5;
+      --border: #e2e8f0;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --bg-surface: #ffffff;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --shadow: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+      --shadow-lg: 0 10px 15px -3px rgba(15,23,42,.06), 0 4px 6px -4px rgba(15,23,42,.04);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      color: var(--text-primary);
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      flex: 1;
+      background: linear-gradient(165deg, #f0fdf4 0%, #dcfce7 40%, #bbf7d0 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 64px;
+    }
+    .hero .logo {
+      margin-bottom: 48px;
+    }
+    .hero .logo img.logo-img {
+      display: block;
+      max-height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+    .hero .tagline {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 400px;
+    }
+    .hero .points { list-style: none; }
+    .hero .points li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+    .hero .points li::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      background: var(--primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+      background-size: 14px;
+      background-position: center;
+    }
+    .login-side {
+      width: 440px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 56px;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border);
+      box-shadow: -8px 0 32px rgba(15,23,42,.04);
+    }
+    .login-side .heading {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .login-side .sub {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0;
+      background: #f1f5f9;
+      border-radius: var(--radius) var(--radius) 0 0;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-bottom: none;
+    }
+    .tab {
+      flex: 1;
+      padding: 12px 16px;
+      text-align: center;
+      font-weight: 500;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      transition: background .15s, color .15s;
+    }
+    .tab:hover { color: var(--text-primary); }
+    .tab.active { background: #fff; color: var(--primary); box-shadow: var(--shadow); font-weight: 600; }
+    .panel {
+      display: none;
+      background: var(--bg-surface);
+      padding: 28px 24px;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      border: 1px solid var(--border);
+      border-top: none;
+      box-shadow: var(--shadow);
+    }
+    .panel.active { display: block; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      min-height: 44px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .form-group input::placeholder { color: #94a3b8; }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(5,150,105,.12);
+    }
+    .btn-login {
+      width: 100%;
+      padding: 14px 18px;
+      min-height: 48px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background .15s, transform .05s;
+    }
+    .btn-login:hover { background: var(--primary-hover); }
+    .footer-login { margin-top: 28px; text-align: center; }
+    .footer-login a {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .footer-login a:hover { color: var(--primary); }
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .hero { padding: 40px 24px; }
+      .hero .logo { margin-bottom: 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 16px; margin-bottom: 28px; }
+      .hero .points { margin-bottom: 28px; }
+      .login-side {
+        width: 100%;
+        padding: 40px 24px;
+        box-shadow: none;
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="logo"><img src="image.png" alt="Ekara" class="logo-img"></div>
+    <h1>Startup reporting that investors trust</h1>
+    <p class="tagline">Upload financials, share metrics, and keep your investors in sync—in one place.</p>
+    <ul class="points">
+      <li>Upload CSV or spreadsheets — we derive MRR, burn, runway</li>
+      <li>Invite investors and control what they see</li>
+      <li>Benchmarks and portfolio view for investors</li>
+    </ul>
+  </section>
+  <aside class="login-side">
+    <h2 class="heading">Sign in</h2>
+    <p class="sub">Choose your account type to continue.</p>
+
+    <div class="tabs">
+      <button type="button" class="tab active" data-panel="investor">Investor</button>
+      <button type="button" class="tab" data-panel="startup">Startup</button>
+    </div>
+
+    <div id="panel-investor" class="panel active">
+      <form id="form-investor" onsubmit="return login(event, 'investor')">
+        <div class="form-group">
+          <label for="inv-email">Email</label>
+          <input type="email" id="inv-email" placeholder="you@fund.vc" required>
+        </div>
+        <div class="form-group">
+          <label for="inv-password">Password</label>
+          <input type="password" id="inv-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-login">Sign in as Investor</button>
+      </form>
+    </div>
+
+    <div id="panel-startup" class="panel">
+      <form id="form-startup" onsubmit="return login(event, 'startup')">
+        <div class="form-group">
+          <label for="stu-email">Email</label>
+          <input type="email" id="stu-email" placeholder="you@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="stu-password">Password</label>
+          <input type="password" id="stu-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-login">Sign in as Startup</button>
+      </form>
+    </div>
+
+    <div class="footer-login">
+      <a href="samples.html">View all demo flows →</a>
+    </div>
+  </aside>
+  <script>
+    document.querySelectorAll('.tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var panelId = 'panel-' + this.getAttribute('data-panel');
+        document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+        document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+        this.classList.add('active');
+        document.getElementById(panelId).classList.add('active');
+      });
+    });
+    function login(e, role) {
+      e.preventDefault();
+      if (role === 'investor') {
+        window.location.href = 'investor-dashboard.html';
+      } else {
+        window.location.href = 'startup-dashboard.html';
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="startup-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="startup-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="startup-dashboard.html" class="active">Dashboard</a>
+        <a href="startup-upload.html">Upload data</a>
+        <a href="startup-metrics.html">Metrics</a>
+        <a href="startup-investors.html">Investors</a>
+        <a href="startup-reports.html">Reports</a>
+        <a href="startup-recommendations.html">Recommendations</a>
+        <a href="startup-settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Dashboard</h1>
+        <div class="header-right">
+          <select class="company-select" id="companySelect" title="Switch company">
+            <option>Demo Startup Pvt Ltd</option>
+          </select>
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="startup-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New recommendations for you</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="startup-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="startup-settings.html" class="avatar" title="Settings">A</a>
+        </div>
+      </header>
+      <div class="content">
+        <div class="content-inner">
+        <div class="page-hero">
+          <h2 class="page-title">Dashboard</h2>
+          <p class="page-desc">Upload your data, track key metrics, and keep investors in sync.</p>
+        </div>
+        <div class="toolbar">
+          <div class="search-wrap">
+            <input type="text" placeholder="Search metrics, reports..." readonly>
+          </div>
+          <div class="filter-pills">
+            <button type="button" class="filter-pill">Last 6 months</button>
+            <button type="button" class="filter-pill">All data</button>
+          </div>
+        </div>
+        <section class="card">
+          <div class="card-title">Upload CSV or documents</div>
+          <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" role="button" tabindex="0">
+            <input type="file" id="fileInput" accept=".csv,.pdf,.xlsx" style="display:none">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto; color: var(--gray-400);">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+            </svg>
+            <p><strong>Drag and drop</strong> your CSV or document here, or click to browse</p>
+            <p>Supported: CSV, PDF, XLSX (max 10 MB)</p>
+            <button type="button" class="btn btn-outline" style="margin-top: 16px;" onclick="event.preventDefault(); event.stopPropagation(); downloadTemplate();">Download template</button>
+            <a href="#" class="btn btn-outline" style="margin-top: 8px; display: inline-block;" onclick="event.preventDefault(); showFormatRequirements(); return false;">View format requirements</a>
+          </div>
+          <p id="uploadStatus" style="margin-top: 12px; font-size: 13px; color: var(--primary); display: none;"></p>
+        </section>
+
+        <section class="card grants-card">
+          <div class="card-title">Grant eligibility</div>
+          <p class="grants-intro">Your startup may be eligible for one or more of the following grants based on the criteria below.</p>
+          <div class="grants-list">
+            <div class="grant-item">
+              <div class="grant-name">Genesis</div>
+              <div class="grant-criteria">Eligibility: Early-stage (pre–Series A), registered in India, sector-agnostic. Annual revenue typically under ₹2 Cr.</div>
+            </div>
+            <div class="grant-item">
+              <div class="grant-name">Tata Trust Fund</div>
+              <div class="grant-criteria">Eligibility: Social impact or sustainability focus, Indian entity. Aligned with Tata Trust’s focus areas (health, education, livelihoods).</div>
+            </div>
+            <div class="grant-item">
+              <div class="grant-name">Agrisure grant</div>
+              <div class="grant-criteria">Eligibility: Agri-tech or food-tech startup. Revenue and stage criteria as per programme guidelines.</div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary grants-rm-btn" onclick="checkWithRM()">Check with RM</button>
+        </section>
+
+        <div class="section-title">Key metrics (from your uploads)</div>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">MRR</div><div class="metric-value">₹4.2L</div><div class="metric-trend up">↑ 12% vs last month</div></div>
+          <div class="metric-card"><div class="metric-label">Burn rate</div><div class="metric-value">₹2.1L</div><div class="metric-trend down">↓ 5%</div></div>
+          <div class="metric-card"><div class="metric-label">Runway</div><div class="metric-value">18 mo</div><div class="metric-trend up">↑ 2 mo</div></div>
+          <div class="metric-card"><div class="metric-label">Cash balance</div><div class="metric-value">₹38L</div><div class="metric-trend up">↑ 8%</div></div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-card"><div class="metric-label">ARR</div><div class="metric-value">₹50.4L</div><div class="metric-trend up">↑ 12%</div></div>
+          <div class="metric-card"><div class="metric-label">Customers</div><div class="metric-value">124</div><div class="metric-trend up">↑ 6</div></div>
+          <div class="metric-card"><div class="metric-label">CAC</div><div class="metric-value">₹8,200</div><div class="metric-trend down">↓ 3%</div></div>
+          <div class="metric-card"><div class="metric-label">LTV : CAC</div><div class="metric-value">3.2x</div><div class="metric-trend up">Healthy</div></div>
+        </div>
+
+        <section class="card">
+          <div class="card-title">Revenue trend (last 6 months)</div>
+          <div class="chart-placeholder">
+            <div class="chart-bar" style="height: 45%;"></div>
+            <div class="chart-bar" style="height: 52%;"></div>
+            <div class="chart-bar" style="height: 48%;"></div>
+            <div class="chart-bar" style="height: 65%;"></div>
+            <div class="chart-bar" style="height: 72%;"></div>
+            <div class="chart-bar" style="height: 85%;"></div>
+          </div>
+          <p style="font-size: var(--text-xs); color: var(--text-muted); margin-top: var(--space-2);">Aug — Sep — Oct — Nov — Dec — Jan</p>
+        </section>
+
+        <div class="section-title">Cash expenditure</div>
+        <div class="data-card">
+          <h3>Month-wise (last 6 months)</h3>
+          <table class="data-table">
+            <thead><tr><th>Month</th><th class="num">Salary &amp; payroll</th><th class="num">Marketing</th><th class="num">Infrastructure</th><th class="num">Other</th><th class="num">Total</th></tr></thead>
+            <tbody>
+              <tr><td>Aug 2025</td><td class="num">₹1.2L</td><td class="num">₹45k</td><td class="num">₹32k</td><td class="num">₹28k</td><td class="num">₹2.25L</td></tr>
+              <tr><td>Sep 2025</td><td class="num">₹1.2L</td><td class="num">₹48k</td><td class="num">₹35k</td><td class="num">₹27k</td><td class="num">₹2.30L</td></tr>
+              <tr><td>Oct 2025</td><td class="num">₹1.25L</td><td class="num">₹42k</td><td class="num">₹38k</td><td class="num">₹30k</td><td class="num">₹2.35L</td></tr>
+              <tr><td>Nov 2025</td><td class="num">₹1.25L</td><td class="num">₹50k</td><td class="num">₹36k</td><td class="num">₹29k</td><td class="num">₹2.40L</td></tr>
+              <tr><td>Dec 2025</td><td class="num">₹1.3L</td><td class="num">₹52k</td><td class="num">₹40k</td><td class="num">₹33k</td><td class="num">₹2.55L</td></tr>
+              <tr><td>Jan 2026</td><td class="num">₹1.3L</td><td class="num">₹48k</td><td class="num">₹38k</td><td class="num">₹34k</td><td class="num">₹2.50L</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="data-card">
+          <h3>Year-wise</h3>
+          <table class="data-table">
+            <thead><tr><th>Year</th><th class="num">Total expenditure</th><th class="num">Revenue</th><th class="num">Net cash flow</th></tr></thead>
+            <tbody>
+              <tr><td>FY 2023</td><td class="num">₹22.4L</td><td class="num">₹18.2L</td><td class="num" style="color: var(--error);">−₹4.2L</td></tr>
+              <tr><td>FY 2024</td><td class="num">₹26.8L</td><td class="num">₹38.5L</td><td class="num" style="color: var(--success);">+₹11.7L</td></tr>
+              <tr><td>FY 2025</td><td class="num">₹28.2L</td><td class="num">₹48.0L</td><td class="num" style="color: var(--success);">+₹19.8L</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="section-title">Cash projections</div>
+        <div class="projection-cards">
+          <div class="projection-card"><div class="year">Year 1</div><div class="amount">₹62L</div><div class="note">Projected closing cash (Jan 2026 – Dec 2026)</div></div>
+          <div class="projection-card"><div class="year">Year 2</div><div class="amount">₹98L</div><div class="note">Projected closing cash (2027)</div></div>
+          <div class="projection-card"><div class="year">Year 3</div><div class="amount">₹1.42 Cr</div><div class="note">Projected closing cash (2028)</div></div>
+        </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" style="display: none;"></div>
+  <div id="formatModal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <span class="modal-close" onclick="closeFormatModal()">&times;</span>
+      <h3>CSV format requirements</h3>
+      <p style="margin-bottom: 12px;">Required columns:</p>
+      <ul style="margin-left: 20px; margin-bottom: 12px;">
+        <li><strong>date</strong> — YYYY-MM-DD</li>
+        <li><strong>description</strong> — Transaction description</li>
+        <li><strong>amount</strong> — Number (no currency symbol)</li>
+        <li><strong>type</strong> — revenue or expense</li>
+        <li><strong>category</strong> — e.g. Software, Rent, Consulting</li>
+        <li><strong>vendor</strong> — Optional</li>
+      </ul>
+      <button type="button" class="btn btn-primary" onclick="closeFormatModal()">Got it</button>
+    </div>
+  </div>
+  <script>
+    function showToast(msg) {
+      var el = document.getElementById('toast');
+      el.textContent = msg;
+      el.style.display = 'block';
+      setTimeout(function() { el.style.display = 'none'; }, 3000);
+    }
+    function downloadTemplate() {
+      var csv = 'date,description,amount,type,category,vendor\n2024-01-15,Software License,50000,expense,Software,Microsoft\n2024-01-20,Client Payment,150000,revenue,Consulting,Acme Corp';
+      var blob = new Blob([csv], { type: 'text/csv' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'ekara_transactions_template.csv';
+      a.click();
+      URL.revokeObjectURL(a.href);
+      showToast('Template downloaded');
+    }
+    function showFormatRequirements() {
+      document.getElementById('formatModal').style.display = 'flex';
+    }
+    function closeFormatModal() {
+      document.getElementById('formatModal').style.display = 'none';
+    }
+    function checkWithRM() {
+      showToast('Request sent. Your relationship manager will reach out shortly.');
+    }
+    var zone = document.getElementById('uploadZone');
+    var fileInput = document.getElementById('fileInput');
+    var status = document.getElementById('uploadStatus');
+    zone.addEventListener('dragover', function(e) { e.preventDefault(); zone.classList.add('dragover'); });
+    zone.addEventListener('dragleave', function() { zone.classList.remove('dragover'); });
+    zone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      zone.classList.remove('dragover');
+      var files = e.dataTransfer.files;
+      if (files.length) { status.textContent = 'Selected: ' + files[0].name; status.style.display = 'block'; showToast('File selected (demo)'); }
+    });
+    fileInput.addEventListener('change', function() {
+      if (fileInput.files.length) { status.textContent = 'Selected: ' + fileInput.files[0].name; status.style.display = 'block'; showToast('File selected (demo)'); }
+    });
+  </script>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>

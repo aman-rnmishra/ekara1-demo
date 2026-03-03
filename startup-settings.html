@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekara — Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="startup-common.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><a href="startup-dashboard.html"><img src="image.png" alt="Ekara" class="logo-img"></a></div>
+      <nav class="nav">
+        <a href="startup-dashboard.html">Dashboard</a>
+        <a href="startup-upload.html">Upload data</a>
+        <a href="startup-metrics.html">Metrics</a>
+        <a href="startup-investors.html">Investors</a>
+        <a href="startup-reports.html">Reports</a>
+        <a href="startup-recommendations.html">Recommendations</a>
+        <a href="startup-settings.html" class="active">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <h1>Settings</h1>
+        <div class="header-right">
+          <select class="company-select"><option>Demo Startup Pvt Ltd</option></select>
+          <div class="notification-dropdown">
+            <button type="button" class="notification-bell" title="Notifications" aria-expanded="false" aria-haspopup="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notification-badge">1</span>
+            </button>
+            <div class="notification-popover">
+              <div class="notification-popover-header">Notifications</div>
+              <div class="notification-popover-body">
+                <a href="startup-recommendations.html" class="notification-item">
+                  <span class="notification-item-title">New recommendations for you</span>
+                  <span class="notification-item-time">2 days ago</span>
+                </a>
+              </div>
+              <a href="startup-recommendations.html" class="notification-popover-footer">See all recommendations</a>
+            </div>
+          </div>
+          <a href="startup-settings.html" class="avatar">A</a>
+        </div>
+      </header>
+      <div class="content">
+        <section class="card">
+          <div class="card-title">Profile</div>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="profileName" value="Admin User">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="profileEmail" value="admin@demostartup.com">
+          </div>
+          <button type="button" class="btn btn-primary" onclick="saveProfile()">Save profile</button>
+        </section>
+        <section class="card">
+          <div class="card-title">Company</div>
+          <div class="form-group">
+            <label>Company name</label>
+            <input type="text" id="companyName" value="Demo Startup Pvt Ltd">
+          </div>
+          <button type="button" class="btn btn-primary" onclick="saveCompany()">Save company</button>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" style="display: none;"></div>
+  <script>
+    function showToast(msg) { var el = document.getElementById('toast'); el.textContent = msg; el.style.display = 'block'; setTimeout(function() { el.style.display = 'none'; }, 3000); }
+    function saveProfile() { showToast('Profile saved'); }
+    function saveCompany() { showToast('Company saved'); }
+  </script>
+  <script src="notification-dropdown.js"></script>
+</body>
+</html>
