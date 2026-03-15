@@ -400,6 +400,17 @@ body {
   margin-bottom: var(--space-4);
 }
 
+/* Simulator — two-column form grid */
+.simulator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+@media (max-width: 900px) {
+  .simulator-grid { grid-template-columns: 1fr; }
+}
+
 .grants-card .grants-intro {
   font-size: var(--text-sm);
   color: var(--text-secondary);

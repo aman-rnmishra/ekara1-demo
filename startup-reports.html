@@ -19,6 +19,7 @@
         <a href="startup-investors.html">Investors</a>
         <a href="startup-reports.html" class="active">Reports</a>
         <a href="startup-recommendations.html">Recommendations</a>
+        <a href="startup-simulator.html">Goal Simulator</a>
         <a href="startup-settings.html">Settings</a>
         <a href="index.html">Log out</a>
       </nav>
@@ -54,6 +55,7 @@
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <button type="button" class="btn btn-primary" onclick="generateReport('monthly')">Generate monthly report</button>
             <button type="button" class="btn btn-outline" onclick="generateReport('quarterly')">Generate quarterly report</button>
+            <button type="button" class="btn btn-outline" onclick="openComplianceModal()">Check compliance</button>
           </div>
         </section>
         <section class="card">
@@ -76,6 +78,19 @@
     </main>
   </div>
   <div id="toast" class="toast" style="display: none;"></div>
+  <div id="complianceModal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <span class="modal-close" onclick="closeComplianceModal()">&times;</span>
+      <h3>Compliance status</h3>
+      <p style="margin-bottom: 16px; font-size: 14px; color: var(--text-muted);">Last filed dates (sample data).</p>
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light);"><strong>GST</strong>: Last filed on 15 Jan 2026</li>
+        <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light);"><strong>TDS</strong>: Last filed on 31 Jan 2026</li>
+        <li style="padding: 10px 0;"><strong>Income Tax</strong>: Last filed on 31 Jul 2025</li>
+      </ul>
+      <button type="button" class="btn btn-primary" style="margin-top: 20px;" onclick="closeComplianceModal()">Got it</button>
+    </div>
+  </div>
   <script>
     function showToast(msg) { var el = document.getElementById('toast'); el.textContent = msg; el.style.display = 'block'; setTimeout(function() { el.style.display = 'none'; }, 3000); }
     function generateReport(type) {
@@ -84,6 +99,12 @@
     }
     function downloadReport(name) {
       showToast('Download started (demo)');
+    }
+    function openComplianceModal() {
+      document.getElementById('complianceModal').style.display = 'flex';
+    }
+    function closeComplianceModal() {
+      document.getElementById('complianceModal').style.display = 'none';
     }
   </script>
   <script src="notification-dropdown.js"></script>
