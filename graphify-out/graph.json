@@ -1,0 +1,685 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "script.js",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\script.js",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_script_js",
+      "community": 1,
+      "norm_label": "script.js"
+    },
+    {
+      "label": "onScroll()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\script.js",
+      "source_location": "L12",
+      "id": "script_onscroll",
+      "community": 1,
+      "norm_label": "onscroll()"
+    },
+    {
+      "label": "animateCounter()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\script.js",
+      "source_location": "L59",
+      "id": "script_animatecounter",
+      "community": 1,
+      "norm_label": "animatecounter()"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\vite.config.js",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_vite_config_js",
+      "community": 17,
+      "norm_label": "vite.config.js"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\App.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_app_jsx",
+      "community": 3,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\App.jsx",
+      "source_location": "L16",
+      "id": "app_app",
+      "community": 3,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\main.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_main_jsx",
+      "community": 18,
+      "norm_label": "main.jsx"
+    },
+    {
+      "label": "About.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\About.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_about_jsx",
+      "community": 4,
+      "norm_label": "about.jsx"
+    },
+    {
+      "label": "About()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\About.jsx",
+      "source_location": "L3",
+      "id": "about_about",
+      "community": 4,
+      "norm_label": "about()"
+    },
+    {
+      "label": "Contact.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Contact.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_contact_jsx",
+      "community": 5,
+      "norm_label": "contact.jsx"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Contact.jsx",
+      "source_location": "L24",
+      "id": "contact_contact",
+      "community": 5,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "CorporateFinanceSuite.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\CorporateFinanceSuite.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_corporatefinancesuite_jsx",
+      "community": 6,
+      "norm_label": "corporatefinancesuite.jsx"
+    },
+    {
+      "label": "CorporateFinanceSuite()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\CorporateFinanceSuite.jsx",
+      "source_location": "L14",
+      "id": "corporatefinancesuite_corporatefinancesuite",
+      "community": 6,
+      "norm_label": "corporatefinancesuite()"
+    },
+    {
+      "label": "Footer.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Footer.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_footer_jsx",
+      "community": 7,
+      "norm_label": "footer.jsx"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Footer.jsx",
+      "source_location": "L3",
+      "id": "footer_footer",
+      "community": 7,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Founder.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Founder.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_founder_jsx",
+      "community": 8,
+      "norm_label": "founder.jsx"
+    },
+    {
+      "label": "Founder()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Founder.jsx",
+      "source_location": "L3",
+      "id": "founder_founder",
+      "community": 8,
+      "norm_label": "founder()"
+    },
+    {
+      "label": "Header.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Header.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_header_jsx",
+      "community": 9,
+      "norm_label": "header.jsx"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Header.jsx",
+      "source_location": "L17",
+      "id": "header_header",
+      "community": 9,
+      "norm_label": "header()"
+    },
+    {
+      "label": "Hero.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Hero.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_hero_jsx",
+      "community": 10,
+      "norm_label": "hero.jsx"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Hero.jsx",
+      "source_location": "L29",
+      "id": "hero_hero",
+      "community": 10,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "Impact.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Impact.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_impact_jsx",
+      "community": 2,
+      "norm_label": "impact.jsx"
+    },
+    {
+      "label": "CountUp()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Impact.jsx",
+      "source_location": "L5",
+      "id": "impact_countup",
+      "community": 2,
+      "norm_label": "countup()"
+    },
+    {
+      "label": "Impact()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Impact.jsx",
+      "source_location": "L39",
+      "id": "impact_impact",
+      "community": 2,
+      "norm_label": "impact()"
+    },
+    {
+      "label": "PersonalFinanceSuite.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\PersonalFinanceSuite.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_personalfinancesuite_jsx",
+      "community": 11,
+      "norm_label": "personalfinancesuite.jsx"
+    },
+    {
+      "label": "PersonalFinanceSuite()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\PersonalFinanceSuite.jsx",
+      "source_location": "L12",
+      "id": "personalfinancesuite_personalfinancesuite",
+      "community": 11,
+      "norm_label": "personalfinancesuite()"
+    },
+    {
+      "label": "PrivacyPolicy.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\PrivacyPolicy.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_privacypolicy_jsx",
+      "community": 12,
+      "norm_label": "privacypolicy.jsx"
+    },
+    {
+      "label": "PrivacyPolicy()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\PrivacyPolicy.jsx",
+      "source_location": "L95",
+      "id": "privacypolicy_privacypolicy",
+      "community": 12,
+      "norm_label": "privacypolicy()"
+    },
+    {
+      "label": "Reveal.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "community": 0,
+      "norm_label": "reveal.jsx"
+    },
+    {
+      "label": "Reveal()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L58",
+      "id": "reveal_reveal",
+      "community": 0,
+      "norm_label": "reveal()"
+    },
+    {
+      "label": "ScaleReveal()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L75",
+      "id": "reveal_scalereveal",
+      "community": 0,
+      "norm_label": "scalereveal()"
+    },
+    {
+      "label": "BlurReveal()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L90",
+      "id": "reveal_blurreveal",
+      "community": 0,
+      "norm_label": "blurreveal()"
+    },
+    {
+      "label": "SlideReveal()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L105",
+      "id": "reveal_slidereveal",
+      "community": 0,
+      "norm_label": "slidereveal()"
+    },
+    {
+      "label": "StaggerReveal()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L121",
+      "id": "reveal_staggerreveal",
+      "community": 0,
+      "norm_label": "staggerreveal()"
+    },
+    {
+      "label": "CardReveal()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L144",
+      "id": "reveal_cardreveal",
+      "community": 0,
+      "norm_label": "cardreveal()"
+    },
+    {
+      "label": "ScrollProgress.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\ScrollProgress.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_scrollprogress_jsx",
+      "community": 13,
+      "norm_label": "scrollprogress.jsx"
+    },
+    {
+      "label": "ScrollProgress()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\ScrollProgress.jsx",
+      "source_location": "L3",
+      "id": "scrollprogress_scrollprogress",
+      "community": 13,
+      "norm_label": "scrollprogress()"
+    },
+    {
+      "label": "Services.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Services.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_services_jsx",
+      "community": 14,
+      "norm_label": "services.jsx"
+    },
+    {
+      "label": "Services()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Services.jsx",
+      "source_location": "L30",
+      "id": "services_services",
+      "community": 14,
+      "norm_label": "services()"
+    },
+    {
+      "label": "StartupSuite.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\StartupSuite.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_startupsuite_jsx",
+      "community": 15,
+      "norm_label": "startupsuite.jsx"
+    },
+    {
+      "label": "StartupSuite()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\StartupSuite.jsx",
+      "source_location": "L12",
+      "id": "startupsuite_startupsuite",
+      "community": 15,
+      "norm_label": "startupsuite()"
+    },
+    {
+      "label": "WhyEkara.jsx",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\WhyEkara.jsx",
+      "source_location": "L1",
+      "id": "d_ekara_portfolio_static_website_react_src_components_whyekara_jsx",
+      "community": 16,
+      "norm_label": "whyekara.jsx"
+    },
+    {
+      "label": "WhyEkara()",
+      "file_type": "code",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\WhyEkara.jsx",
+      "source_location": "L5",
+      "id": "whyekara_whyekara",
+      "community": 16,
+      "norm_label": "whyekara()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\script.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_script_js",
+      "_tgt": "script_onscroll",
+      "source": "d_ekara_portfolio_static_website_react_script_js",
+      "target": "script_onscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\script.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_script_js",
+      "_tgt": "script_animatecounter",
+      "source": "d_ekara_portfolio_static_website_react_script_js",
+      "target": "script_animatecounter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\App.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_app_jsx",
+      "_tgt": "app_app",
+      "source": "d_ekara_portfolio_static_website_react_src_app_jsx",
+      "target": "app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\About.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_about_jsx",
+      "_tgt": "about_about",
+      "source": "d_ekara_portfolio_static_website_react_src_components_about_jsx",
+      "target": "about_about",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Contact.jsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_contact_jsx",
+      "_tgt": "contact_contact",
+      "source": "d_ekara_portfolio_static_website_react_src_components_contact_jsx",
+      "target": "contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\CorporateFinanceSuite.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_corporatefinancesuite_jsx",
+      "_tgt": "corporatefinancesuite_corporatefinancesuite",
+      "source": "d_ekara_portfolio_static_website_react_src_components_corporatefinancesuite_jsx",
+      "target": "corporatefinancesuite_corporatefinancesuite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Footer.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_footer_jsx",
+      "_tgt": "footer_footer",
+      "source": "d_ekara_portfolio_static_website_react_src_components_footer_jsx",
+      "target": "footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Founder.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_founder_jsx",
+      "_tgt": "founder_founder",
+      "source": "d_ekara_portfolio_static_website_react_src_components_founder_jsx",
+      "target": "founder_founder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Header.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_header_jsx",
+      "_tgt": "header_header",
+      "source": "d_ekara_portfolio_static_website_react_src_components_header_jsx",
+      "target": "header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Hero.jsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_hero_jsx",
+      "_tgt": "hero_hero",
+      "source": "d_ekara_portfolio_static_website_react_src_components_hero_jsx",
+      "target": "hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Impact.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_impact_jsx",
+      "_tgt": "impact_countup",
+      "source": "d_ekara_portfolio_static_website_react_src_components_impact_jsx",
+      "target": "impact_countup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Impact.jsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_impact_jsx",
+      "_tgt": "impact_impact",
+      "source": "d_ekara_portfolio_static_website_react_src_components_impact_jsx",
+      "target": "impact_impact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\PersonalFinanceSuite.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_personalfinancesuite_jsx",
+      "_tgt": "personalfinancesuite_personalfinancesuite",
+      "source": "d_ekara_portfolio_static_website_react_src_components_personalfinancesuite_jsx",
+      "target": "personalfinancesuite_personalfinancesuite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\PrivacyPolicy.jsx",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_privacypolicy_jsx",
+      "_tgt": "privacypolicy_privacypolicy",
+      "source": "d_ekara_portfolio_static_website_react_src_components_privacypolicy_jsx",
+      "target": "privacypolicy_privacypolicy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "_tgt": "reveal_reveal",
+      "source": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "target": "reveal_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "_tgt": "reveal_scalereveal",
+      "source": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "target": "reveal_scalereveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "_tgt": "reveal_blurreveal",
+      "source": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "target": "reveal_blurreveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L105",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "_tgt": "reveal_slidereveal",
+      "source": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "target": "reveal_slidereveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "_tgt": "reveal_staggerreveal",
+      "source": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "target": "reveal_staggerreveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Reveal.jsx",
+      "source_location": "L144",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "_tgt": "reveal_cardreveal",
+      "source": "d_ekara_portfolio_static_website_react_src_components_reveal_jsx",
+      "target": "reveal_cardreveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\ScrollProgress.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_scrollprogress_jsx",
+      "_tgt": "scrollprogress_scrollprogress",
+      "source": "d_ekara_portfolio_static_website_react_src_components_scrollprogress_jsx",
+      "target": "scrollprogress_scrollprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\Services.jsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_services_jsx",
+      "_tgt": "services_services",
+      "source": "d_ekara_portfolio_static_website_react_src_components_services_jsx",
+      "target": "services_services",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\StartupSuite.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_startupsuite_jsx",
+      "_tgt": "startupsuite_startupsuite",
+      "source": "d_ekara_portfolio_static_website_react_src_components_startupsuite_jsx",
+      "target": "startupsuite_startupsuite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "D:\\Ekara-portfolio-static-website-react\\src\\components\\WhyEkara.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "d_ekara_portfolio_static_website_react_src_components_whyekara_jsx",
+      "_tgt": "whyekara_whyekara",
+      "source": "d_ekara_portfolio_static_website_react_src_components_whyekara_jsx",
+      "target": "whyekara_whyekara",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

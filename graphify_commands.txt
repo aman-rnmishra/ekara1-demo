@@ -1,0 +1,24 @@
+To create a knowledge graph for your project with Graphify on Windows (cmd), do this from your project root (D:\Ekara) with your venv active.
+
+1) Build the graph from your code
+cd /d D:\Ekara
+graphify update .
+This generates output in a folder like graphify-out/ (by default), including the key files:
+
+graphify-out/graph.json (the knowledge graph data)
+graphify-out/GRAPH_REPORT.md (human-readable summary)
+graphify-out/graph.html (interactive visualization)
+
+2) Open the visualization
+start graphify-out\graph.html
+3) Ask questions against the graph
+
+graphify query "Summarize the startup vs investor flows"
+graphify explain "startup-simulator.html"
+
+Optional: keep it updated automatically
+graphify watch .
+
+Optional: integrate with Cursor
+graphify cursor install
+If you paste the output of dir graphify-out after graphify update ., I can confirm the exact files it generated on your machine and where to open them.
