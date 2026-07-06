@@ -1,13 +1,15 @@
-# Ekara Financials — React Portfolio
+# Ekara Financials — EKARA V1 Demo Platform
 
-A React version of the Ekara Financials static site with the same light green & white theme, improved structure, and **Framer Motion** animations (scroll reveals, staggered cards, count-up stats, hover effects, hero journey animation).
+A production-quality, interactive investor-demo website for **Ekara Financials** built with React, Tailwind CSS, Framer Motion, and Recharts. Showcases the complete EKARA V1 product experience with no backend required.
 
 ## Stack
 
 - **React 18** + **Vite**
-- **Framer Motion** for animations
-- Same fonts: DM Sans, Playfair Display
-- Same palette: greens, white, gray (see `src/index.css`)
+- **Tailwind CSS v4** — Ekara brand theme
+- **React Router** — multi-page routing
+- **Framer Motion** — animations & transitions
+- **Recharts** — interactive financial charts
+- **Lucide Icons**
 
 ## Run locally
 
@@ -18,35 +20,59 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173).
 
+## Demo Logins
+
+| Role | Email | Password |
+|------|-------|----------|
+| Startup | `startup@ekara.org.in` | `Startup@123` |
+| Investor | `investor@ekara.org.in` | `Investor@123` |
+
+Login persists via `localStorage`. Invalid credentials show **"Invalid credentials"**.
+
+## Assets
+
+Place in the **`public/`** folder:
+
+- **`company-logo.png`** — Ekara logo (header, sidebar, footer)
+- **`photo.jpg`** — founder photo (landing page)
+
+## Project structure
+
+```
+src/
+ ├── pages/           Landing, Login, Startup & Investor pages
+ ├── layouts/         Dashboard sidebars (Startup & Investor)
+ ├── components/ui/   Shared UI (KPICard, Badge, Tables, etc.)
+ ├── charts/          Recharts components
+ ├── data/            Demo data (12 companies, 24 months history)
+ ├── hooks/           Auth hook
+ ├── context/         Auth provider
+ ├── routes/          Protected routes
+ └── utils/           Formatting & constants
+```
+
+## Features
+
+### Landing Page
+- Hero with Startup Demo / Investor Demo CTAs
+- Platform features, Why Ekara workflow, About, Impact, Founder, Contact
+
+### Startup Dashboard
+- KPI overview with animated cards & Recharts analytics
+- Financial uploads, statements (P&L, BS, CF, Trial Balance)
+- Burn & runway center, receivables/payables aging
+- Expert insights and grant eligibility
+- Investor management, reports center, settings
+
+### Investor Dashboard
+- Portfolio overview with 12 companies
+- Company deep dive, risk center, expert commentary
+- Expert commentary and portfolio reports
+- Reports with PDF-style preview
+
 ## Build
 
 ```bash
 npm run build
-npm run preview   # optional: preview production build
+npm run preview
 ```
-
-## Assets
-
-Put these in the **`public/`** folder so they are served from the root:
-
-- **`company-logo.png`** — used in header and footer
-- **`photo.jpg`** — founder photo in the Leadership section
-
-If `company-logo.png` is missing, a fallback “E” logo is shown.
-
-## Project structure
-
-- `src/App.jsx` — main app with all sections
-- `src/components/` — Header, Hero, About, StartupSuite, PersonalFinanceSuite, CorporateFinanceSuite, Services, Impact, WhyEkara, Founder, Contact, Footer
-- `src/components/Reveal.jsx` — shared `Reveal`, `StaggerReveal`, `CardReveal` animation wrappers
-- `src/index.css` — global theme and layout (same as original theme)
-
-## Animations
-
-- **Hero:** Staggered fade-up for heading and CTA; animated “journey” rail and moving dot (Start → Grow → Scale)
-- **Sections:** Fade-up on scroll for section headers
-- **Cards:** Staggered reveal when in view; slight lift on hover
-- **Impact:** Count-up when stats enter view
-- **Header:** Shadow on scroll; mobile menu toggle
-
-Original static files (`index.html` overwritten by Vite; backup your copy if needed), `styles.css`, and `script.js` are no longer used by the React app. You can keep them for reference or remove them.

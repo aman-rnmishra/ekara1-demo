@@ -11,7 +11,7 @@ export default function Founder() {
         <CardReveal className="founder__card">
           <div className="founder__inner">
             <div className="founder__photo">
-              <img src="/photo.jpg" alt="Anima Mishra, Founder - Ekara Financials" width="280" height="280" />
+              <img src={`${import.meta.env.BASE_URL}anima-mishra.png`} alt="Anima Mishra, Founder - Ekara Financials" width="280" height="280" />
             </div>
             <div className="founder__content">
               <h3>Anima Mishra</h3>

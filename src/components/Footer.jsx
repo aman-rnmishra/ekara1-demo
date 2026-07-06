@@ -14,7 +14,7 @@ export default function Footer() {
           <a href="#" className="footer__logo">
             <span className="logo-img-wrap">
               <img
-                src="/company-logo.png"
+                src={`${import.meta.env.BASE_URL}company-logo.png`}
                 alt="Ekara Financials"
                 className="logo-img"
                 onError={(e) => {
@@ -34,7 +34,7 @@ export default function Footer() {
           <p className="footer__links">
             <a href="#privacy">Privacy Policy</a>
           </p>
-          <p className="footer__domain"><a href="https://ekara.co.in">ekara.co.in</a></p>
+          <p className="footer__domain"><a href="https://ekara.org.in">ekara.org.in</a></p>
         </div>
       </div>
     </motion.footer>

@@ -6,3 +6,5 @@ graphify-out/cache/
 .env.*
 *.log
 .DS_Store
+credentials.txt
+CONVERSATION_LOG.md

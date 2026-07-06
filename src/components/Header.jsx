@@ -35,7 +35,7 @@ export default function Header() {
         <a href="#" className="nav__logo" onClick={() => setMenuOpen(false)}>
           <span className="logo-img-wrap">
             <img
-              src="/company-logo.png"
+              src={`${import.meta.env.BASE_URL}company-logo.png`}
               alt="Ekara Financials"
               className="logo-img"
               onError={(e) => {

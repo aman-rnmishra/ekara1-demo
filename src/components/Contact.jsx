@@ -6,7 +6,7 @@ const contactCards = [
     title: 'Reach Us',
     content: (
       <>
-        <p><a href="mailto:team@ekara.co.in">team@ekara.co.in</a></p>
+        <p><a href="mailto:team@ekara.org.in">team@ekara.org.in</a></p>
         <p><a href="https://wa.me/919431348343">+91 9431348343</a> (WhatsApp)</p>
       </>
     ),
@@ -45,7 +45,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <motion.a href="mailto:team@ekara.co.in" className="btn btn--primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+          <motion.a href="mailto:team@ekara.org.in" className="btn btn--primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             Email Us
           </motion.a>
           <motion.a href="https://wa.me/919431348343" className="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
