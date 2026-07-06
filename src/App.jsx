@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { ProtectedRoute, LoginRoute } from './routes/ProtectedRoute'
 import { StartupLayout, InvestorLayout } from './layouts/DashboardLayouts'
@@ -29,7 +29,7 @@ import InvestorSettings from './pages/investor/InvestorSettings'
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login/:role" element={<LoginRoute><LoginPage /></LoginRoute>} />
@@ -56,7 +56,7 @@ export default function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   )
 }
