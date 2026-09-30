@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard, Upload, FileText, BarChart3, Sparkles, FileBarChart,
-  Users, Award, Target, Settings, LogOut, Menu, ChevronRight, BadgePercent,
+  Users, Award, Target, Settings, LogOut, Menu, ChevronRight, BadgePercent, Factory,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import NotificationBell from '../components/ui/NotificationBell'
@@ -14,6 +14,7 @@ const startupNav = [
   { path: '/startup/uploads', icon: Upload, label: 'Financial Uploads' },
   { path: '/startup/statements', icon: FileText, label: 'Financial Statements' },
   { path: '/startup/metrics', icon: BarChart3, label: 'Metrics' },
+  { path: '/startup/projects', icon: Factory, label: 'Project Management' },
   { path: '/startup/insights', icon: Sparkles, label: 'Expert Insights' },
   { path: '/startup/reports', icon: FileBarChart, label: 'Reports' },
   { path: '/startup/investors', icon: Users, label: 'Investors' },

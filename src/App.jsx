@@ -10,6 +10,7 @@ import StartupDashboard from './pages/startup/StartupDashboard'
 import FinancialUploads from './pages/startup/FinancialUploads'
 import FinancialStatements from './pages/startup/FinancialStatements'
 import MetricsPage from './pages/startup/MetricsPage'
+import ProjectManagement from './pages/startup/ProjectManagement'
 import StartupAIInsights from './pages/startup/StartupAIInsights'
 import StartupReports from './pages/startup/StartupReports'
 import InvestorManagement from './pages/startup/InvestorManagement'
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/startup/uploads" element={<ProtectedRoute role="startup"><StartupLayout><FinancialUploads /></StartupLayout></ProtectedRoute>} />
           <Route path="/startup/statements" element={<ProtectedRoute role="startup"><StartupLayout><FinancialStatements /></StartupLayout></ProtectedRoute>} />
           <Route path="/startup/metrics" element={<ProtectedRoute role="startup"><StartupLayout><MetricsPage /></StartupLayout></ProtectedRoute>} />
+          <Route path="/startup/projects" element={<ProtectedRoute role="startup"><StartupLayout><ProjectManagement /></StartupLayout></ProtectedRoute>} />
           <Route path="/startup/insights" element={<ProtectedRoute role="startup"><StartupLayout><StartupAIInsights /></StartupLayout></ProtectedRoute>} />
           <Route path="/startup/reports" element={<ProtectedRoute role="startup"><StartupLayout><StartupReports /></StartupLayout></ProtectedRoute>} />
           <Route path="/startup/investors" element={<ProtectedRoute role="startup"><StartupLayout><InvestorManagement /></StartupLayout></ProtectedRoute>} />
